@@ -69,3 +69,5 @@ const ShowCv = ({ cvData }) => {
     </>
   );
 };
+
+export default ShowCv;
