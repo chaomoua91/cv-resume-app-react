@@ -1,6 +1,6 @@
-import "./App.css";
 import { useState } from "react";
-import ShowCV from "./components/ShowCv";
+import "./App.css";
+import ShowCv from "./components/ShowCv";
 import CvDetail from "./components/CvDetail";
 
 function App() {

@@ -1,4 +1,4 @@
-import FormField from "/.FromField";
+import FormField from "./FormField";
 
 const ContactInfo = ({ cvData, setCvData }) => {
   const handleChange = (e) => {
@@ -7,11 +7,9 @@ const ContactInfo = ({ cvData, setCvData }) => {
 
   return (
     <div className="contactInfo">
-      <div className="contactHeading">
-        <h2>Contact Information</h2>
-      </div>
+      <SectionHeading title="Contact Information" />
       <form>
-        <div className="nameIfoInputs">
+        <div className="nameInfoInputs">
           <FormField
             placeholder="First Name"
             type="text"
@@ -19,7 +17,6 @@ const ContactInfo = ({ cvData, setCvData }) => {
             value={cvData.firstName}
             onChange={handleChange}
           />
-
           <FormField
             placeholder="Last Name"
             type="text"
@@ -34,7 +31,6 @@ const ContactInfo = ({ cvData, setCvData }) => {
             value={cvData.phoneNumber}
             onChange={handleChange}
           />
-
           <FormField
             placeholder="Email"
             type="email"
@@ -52,22 +48,24 @@ const ContactInfo = ({ cvData, setCvData }) => {
           />
         </div>
       </form>
-      <div className="profSummery">
-        <div className="profHeading">
-          <h2>Professional Summary</h2>
-        </div>
-        <form>
-          <FormField
-            placeholder="Summary"
-            type="text"
-            name="summary"
-            value={cvData.summary}
-            onChange={handleChange}
-          />
-        </form>
-      </div>
+      <SectionHeading title="Professional Summary" />
+      <form>
+        <FormField
+          placeholder="Summary"
+          type="text"
+          name="summary"
+          value={cvData.summary}
+          onChange={handleChange}
+        />
+      </form>
     </div>
   );
 };
+
+const SectionHeading = ({ title }) => (
+  <div className="sectionHeading">
+    <h2>{title}</h2>
+  </div>
+);
 
 export default ContactInfo;

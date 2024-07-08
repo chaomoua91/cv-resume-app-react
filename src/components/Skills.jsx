@@ -2,7 +2,7 @@ import FormField from "./FormField";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 
-export default function Skills({ cvData, setCvData }) {
+function Skills({ cvData, setCvData }) {
   const [skill, setSkill] = useState({
     title: "",
     description: "",
@@ -28,8 +28,10 @@ export default function Skills({ cvData, setCvData }) {
         },
       ],
     });
+
     setSkill({ title: "", description: "", startDate: "", endDate: "" });
   };
+
   const deleteSkill = (id) => {
     const updatedSkills = cvData.allSkills.filter((skill) => skill.id !== id);
 
@@ -88,3 +90,5 @@ export default function Skills({ cvData, setCvData }) {
     </>
   );
 }
+
+export default Skills;

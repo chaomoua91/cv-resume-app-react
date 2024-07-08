@@ -1,11 +1,12 @@
 import { v4 as uuidv4 } from "uuid";
 import FormField from "./FormField";
 
-const WorkExp = (cvData, setCvData) => {
+const WorkExp = ({ cvData, setCvData }) => {
   const handleChange = (e, id) => {
     const updateWorkExperience = cvData.workExperience.map((work) =>
       work.id === id ? { ...work, [e.target.name]: e.target.value } : work
     );
+
     setCvData({ ...cvData, workExperience: updateWorkExperience });
   };
 
@@ -25,6 +26,7 @@ const WorkExp = (cvData, setCvData) => {
       ],
     });
   };
+
   const deleteWorkExp = (id) => {
     const updatedWorkExp = cvData.workExperience.filter(
       (work) => work.id !== id

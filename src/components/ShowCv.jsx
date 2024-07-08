@@ -3,14 +3,17 @@ const ShowCv = ({ cvData }) => {
     <>
       <nav>
         <h2 className="cvShowHead">Name</h2>
+
         <h2 className="cvShowHead">
-          {cvData.firstName} {cvData.LastName}
+          {cvData.firstName} {cvData.lastName}
         </h2>
+
         <div className="contactTextHead">
           <p>PNum: {cvData.phoneNumber}</p>
           <p>Email: {cvData.email}</p>
         </div>
       </nav>
+
       <section className="maincontainer">
         <div className="perDesText">
           <h2>Personal Description:</h2>

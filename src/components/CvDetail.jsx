@@ -3,7 +3,7 @@ import WorkExp from "./WorkExperience";
 import Education from "./Education";
 import Skills from "./Skills";
 
-const CvDetail = (cvData, setCvData) => {
+const CvDetail = ({ cvData, setCvData }) => {
   return (
     <>
       <ContactInfo cvData={cvData} setCvData={setCvData} />
