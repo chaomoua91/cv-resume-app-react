@@ -9,7 +9,7 @@ const ShowCv = ({ cvData }) => {
         </h2>
 
         <div className="contactTextHead">
-          <p>PNum: {cvData.phoneNumber}</p>
+          <p>PhoneNum: {cvData.phoneNumber}</p>
           <p>Email: {cvData.email}</p>
         </div>
       </nav>
